@@ -1,0 +1,60 @@
+{
+  "firebaseConfig": {
+    "projectId": "pranjal-free-fire",
+    "apiKey": "YOUR_API_KEY_HERE",
+    "authDomain": "pranjal-free-fire.firebaseapp.com",
+    "databaseURL": "https://pranjal-free-fire.firebaseio.com",
+    "storageBucket": "pranjal-free-fire.appspot.com",
+    "messagingSenderId": "YOUR_MESSAGING_SENDER_ID",
+    "appId": "YOUR_APP_ID"
+  },
+  "databaseRules": {
+    "rules": {
+      "players": {
+        "$uid": {
+          ".read": "auth.uid === $uid",
+          ".write": "auth.uid === $uid"
+        }
+      },
+      "games": {
+        "$gameId": {
+          ".read": true,
+          ".write": "root.child('games').child($gameId).child('players').child(auth.uid).exists()"
+        }
+      },
+      "leaderboard": {
+        ".read": true
+      }
+    }
+  },
+  "collectionSchemas": {
+    "players": {
+      "userId": "string",
+      "username": "string",
+      "email": "string",
+      "level": "number",
+      "xp": "number",
+      "brRanking": "number",
+      "csRanking": "number",
+      "totalWins": "number",
+      "totalKills": "number",
+      "createdAt": "timestamp"
+    },
+    "activeGames": {
+      "gameId": "string",
+      "gameMode": "string",
+      "players": "array",
+      "status": "string",
+      "createdAt": "timestamp",
+      "updatedAt": "timestamp"
+    },
+    "leaderboard": {
+      "userId": "string",
+      "username": "string",
+      "rankingScore": "number",
+      "gameMode": "string",
+      "rank": "number",
+      "updatedAt": "timestamp"
+    }
+  }
+}
