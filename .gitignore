@@ -1,49 +1,42 @@
-# Build outputs
+# Gradle
+.gradle/
 build/
-out/
-dist/
-*.o
-*.so
-*.dylib
-*.exe
 *.apk
-*.ipa
+*.aar
+*.ap_
+*.dex
 
-# IDE
+# Android Studio
 .idea/
-.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Native builds
+cmake_build/
+.cxx/
+
+# Build
+local.properties
 *.swp
 *.swo
 *~
-.DS_Store
+.classpath
+.project
+.settings/
+bin/
 
-# Dependencies
+# Misc
+.gradle
+.metadata
+*.log
+
+# Environment
+.env
+.env.local
 node_modules/
-.gradle/
-cmake-build-debug/
-cmake-build-release/
 
 # Firebase
+google-services.json
 service-account-key.json
-.env
-
-# Compiled files
-*.class
-*.jar
-*.war
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Build artifacts
-CMakeCache.txt
-CMakeFiles/
-cmake_install.cmake
-Makefile
-
-# Temporary files
-*.tmp
-*.bak
-*.swp

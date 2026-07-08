@@ -1,0 +1,6 @@
+plugins {
+    id 'com.gradle.enterprise' version '3.13.4'
+}
+
+rootProject.name = "Pranjal Fire India"
+include ':app'
