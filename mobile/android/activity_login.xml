@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/gradient_bg">
+    
+    <!-- App Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔥 Pranjal Free Fire"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Battle Royale & Competitive Gaming"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginBottom="48dp"
+        android:alpha="0.8" />
+    
+    <!-- Google Login -->
+    <Button
+        android:id="@+id/btn_google_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🔵 Sign in with Google"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_google_bg"
+        android:layout_marginBottom="16dp" />
+    
+    <!-- Facebook Login -->
+    <Button
+        android:id="@+id/btn_facebook_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="👤 Sign in with Facebook"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_facebook_bg"
+        android:layout_marginBottom="16dp" />
+    
+    <!-- Apple Login -->
+    <Button
+        android:id="@+id/btn_apple_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🍎 Sign in with Apple"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_apple_bg"
+        android:layout_marginBottom="16dp" />
+    
+    <!-- Guest Login -->
+    <Button
+        android:id="@+id/btn_guest_login"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="👥 Play as Guest"
+        android:textSize="16sp"
+        android:textColor="#FF6B6B"
+        android:background="@drawable/btn_guest_bg"
+        android:layout_marginBottom="32dp" />
+    
+    <!-- Footer -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer: pranjalyadavdp9170@gmail.com"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:alpha="0.6" />
+    
+</LinearLayout>

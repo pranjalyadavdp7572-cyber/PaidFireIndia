@@ -1,0 +1,53 @@
+{
+  "type": "service_account",
+  "project_id": "pranjal-free-fire",
+  "private_key_id": "YOUR_PRIVATE_KEY_ID",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nYOUR_PRIVATE_KEY\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-xxxxx@pranjal-free-fire.iam.gserviceaccount.com",
+  "client_id": "YOUR_CLIENT_ID",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-xxxxx%40pranjal-free-fire.iam.gserviceaccount.com",
+  "oAuth2Providers": {
+    "google": {
+      "enabled": true,
+      "clientId": "YOUR_GOOGLE_CLIENT_ID",
+      "clientSecret": "YOUR_GOOGLE_CLIENT_SECRET"
+    },
+    "facebook": {
+      "enabled": true,
+      "appId": "YOUR_FACEBOOK_APP_ID",
+      "appSecret": "YOUR_FACEBOOK_APP_SECRET"
+    },
+    "apple": {
+      "enabled": true,
+      "teamId": "YOUR_APPLE_TEAM_ID",
+      "bundleId": "com.pranjalfreefireindia",
+      "keyId": "YOUR_APPLE_KEY_ID",
+      "privateKey": "YOUR_APPLE_PRIVATE_KEY"
+    }
+  },
+  "databaseRules": {
+    "rules": {
+      "players": {
+        "$uid": {
+          ".read": "auth.uid === $uid",
+          ".write": "auth.uid === $uid"
+        }
+      },
+      "games": {
+        "$gameId": {
+          ".read": true,
+          ".write": "root.child('games').child($gameId).child('players').child(auth.uid).exists()"
+        }
+      },
+      "leaderboard": {
+        ".read": true,
+        ".write": false
+      }
+    }
+  },
+  "developerId": "pranjalyadavdp9170@gmail.com",
+  "noOtpRequired": true
+}
