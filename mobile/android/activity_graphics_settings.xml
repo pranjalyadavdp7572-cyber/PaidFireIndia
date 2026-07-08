@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/game_bg">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚙️ Graphics Settings"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp" />
+    
+    <!-- Resolution -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="📐 Resolution"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/resolution_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1080p"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/resolution_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    
+    <!-- Shadow Quality -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌑 Shadow Quality"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/shadow_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/shadow_quality_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    
+    <!-- Texture Quality -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🎨 Texture Quality"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/texture_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1024px"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/texture_quality_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    
+    <!-- Draw Distance -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👁️ Draw Distance"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/draw_distance_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100m"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/draw_distance_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    
+    <!-- FPS Target -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⚡ FPS Target"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            
+            <TextView
+                android:id="@+id/fps_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60 FPS"
+                android:textColor="@color/accent"
+                android:textSize="14sp" />
+        </LinearLayout>
+        
+        <SeekBar
+            android:id="@+id/fps_target_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="3"
+            android:progress="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+    
+    <!-- Special Effects Toggles -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✨ Bloom"
+                android:textColor="@color/white" />
+            
+            <Switch
+                android:id="@+id/bloom_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💨 Motion Blur"
+                android:textColor="@color/white" />
+            
+            <Switch
+                android:id="@+id/motion_blur_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌫️ Ambient Occlusion"
+                android:textColor="@color/white" />
+            
+            <Switch
+                android:id="@+id/ao_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- Storage Info -->
+    <TextView
+        android:id="@+id/storage_size_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estimated Size: 1.2 GB"
+        android:textColor="@color/warning"
+        android:textSize="14sp"
+        android:layout_marginBottom="16dp" />
+    
+    <!-- Preset Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+        
+        <Button
+            android:id="@+id/preset_low_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Low"
+            android:layout_marginEnd="4dp" />
+        
+        <Button
+            android:id="@+id/preset_medium_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Medium"
+            android:layout_marginEnd="4dp" />
+        
+        <Button
+            android:id="@+id/preset_high_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="High"
+            android:layout_marginEnd="4dp" />
+        
+        <Button
+            android:id="@+id/preset_ultra_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ultra" />
+    </LinearLayout>
+    
+    <!-- Apply Button -->
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✅ Apply Settings"
+        android:textSize="16sp"
+        android:padding="16dp"
+        android:backgroundTint="@color/accent" />
+    
+</LinearLayout>
